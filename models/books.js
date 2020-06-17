@@ -1,36 +1,15 @@
-// Require mongoose
-const mongoose = require('mongoose');
-
-// Create schema variable
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({
-	title: {
-		type: String,
-		trim: true,
-		required: 'Enter the name for the book'
-	},
-	authors: [
-		{
-			type: String,
-			trim: true,
-			required: 'Enter the author(s) of the book'
-		}
-	],
-	image: {
-		type: String,
-		trim: true
-	},
-	previewLink: {
-		type: String,
-		trim: true
-	},
-	description: {
-		type: String,
-		trim: true
-	}
+  title: { type: String, required: true },
+  authors: [{type: String, required: true}],
+  description: String,
+  image: {type: String, trim: true},
+  link: {type: String, trim: true},
+  date: { type: Date, default: Date.now }
 });
 
-const Book = mongoose.model('Books', bookSchema);
+const Book = mongoose.model("Book", bookSchema);
 
 module.exports = Book;
