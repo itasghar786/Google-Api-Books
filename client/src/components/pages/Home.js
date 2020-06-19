@@ -3,8 +3,7 @@ import Navbar from '../Navbar'
 import Jumbotron from '../Jumbotron'
 import ResultCard from "../ResultCard";
 import SearchForm from "../SearchForm";
-import API from "../../utils/api.js";
-
+import API from '../../utils/API'
 class Home extends Component {
     state = {
         books: [],

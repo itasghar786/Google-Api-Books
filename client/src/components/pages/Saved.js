@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from '../Navbar'
 import Jumbotron from '../Jumbotron'
-import API from '../../utils/api'
+import API from '../../utils/API'
 import ResultCard from "../ResultCard";
 
 class Saved extends Component {
